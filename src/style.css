@@ -1,0 +1,169 @@
+:root {
+  font-family: "GOST Type BU", Iosevka, monospace;
+  font-size: 12px;
+
+  --s-bg: #ffffff;
+  --p-bg: #d1d1d1;
+  --d-bg: #a2a2a2;
+  --f-bg: #303030;
+}
+
+.s-bg {
+  background-color: var(--s-bg);
+}
+.p-bg {
+  background-color: var(--p-bg);
+}
+.d-bg {
+  background-color: var(--d-bg);
+}
+.f-bg {
+  background-color: var(--f-bg);
+}
+
+#app {
+  padding: 8px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+table ul,
+.noListStyles {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul:not(table ul):not(.noListStyles) {
+  list-style-type: disc;
+  margin-left: 1.5em;
+}
+
+th {
+  font-weight: inherit;
+}
+
+.testBGList {
+  display: flex;
+  gap: 2em;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.testBGList li {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.testBGList li span {
+  display: inline-block;
+  height: 2em;
+  width: 4em;
+  border: 1px black solid;
+}
+
+#otherTable {
+  margin-top: 0.5em;
+}
+
+table,
+td:not(.cell_empty),
+th {
+  border: 1px solid black;
+}
+
+.periodNumber,
+.rowNumber,
+th {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.2em 0.2em;
+}
+
+.groupTitle {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cell {
+  /*width: 9em;*/
+  text-align: left;
+  line-height: 0.8;
+  vertical-align: top;
+  padding: 0.2em 0.1em 0.1em 0.1em;
+}
+
+.cellContent {
+  display: flex;
+  align-items: stretch;
+}
+
+.cell_bElement .cellContent {
+  flex-direction: row-reverse;
+}
+
+.cellElectrons {
+  padding: 0.1em;
+  font-size: 0.8em;
+  line-height: 0.9;
+}
+
+.cellOther {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cellData {
+  flex-grow: 1;
+}
+
+.cellDataBlocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cell_bElement .cellDataBlocks {
+  flex-direction: row-reverse;
+}
+
+.cellDataSymbolBlock {
+  display: flex;
+  gap: 0.1em;
+}
+
+.cell_bElement .cellDataFirstBlock {
+  text-align: right;
+}
+
+.cell_bElement .cellDataSymbolBlock {
+  justify-content: right;
+}
+
+.cellSymbol {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.cellWeight {
+  font-size: 0.9em;
+}
+
+.cellElectronConfig {
+  font-size: 0.8em;
+  padding-top: 0.2em;
+  line-height: 1.5;
+}
+
+sup {
+  font-size: 1em;
+}
+
+.specialElementMark img {
+  aspect-ratio: square;
+  height: 1.5em;
+}

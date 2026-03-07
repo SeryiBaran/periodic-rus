@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rus-periodic-table-js</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Периодическая система химических элементов Д. И. Менделеева</h1>
+      <p>Приведены следующие параметры:</p>
+      <ul>
+        <li>Электронные слои</li>
+        <li>Номер</li>
+        <li>Символ</li>
+        <li>Относительная атомная масса</li>
+        <li>Электронная конфигурация</li>
+        <li>
+          Название:
+          <ul>
+            <li>На русском</li>
+            <li>На английском</li>
+            <li>На латыни</li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="testBGList noListStyles">
+        <li><span class="s-bg"></span>s-элементы</li>
+        <li><span class="p-bg"></span>p-элементы</li>
+        <li><span class="d-bg"></span>d-элементы</li>
+        <li><span class="f-bg"></span>f-элементы</li>
+      </ul>
+      <table id="table">
+        <thead id="thead"></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <table id="otherTable">
+        <tbody id="otherTbody"></tbody>
+      </table>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
