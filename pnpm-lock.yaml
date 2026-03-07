@@ -11,13 +11,22 @@ importers:
       '@fontsource/iosevka':
         specifier: ^5.2.5
         version: 5.2.5
+      downloadjs:
+        specifier: ^1.4.7
+        version: 1.4.7
       gardevoir:
         specifier: ^1.0.0
         version: 1.0.0
+      html-to-image:
+        specifier: ^1.11.13
+        version: 1.11.13
       leader-line:
         specifier: ^1.0.8
         version: 1.0.8
     devDependencies:
+      '@types/downloadjs':
+        specifier: ^1.4.6
+        version: 1.4.6
       typescript:
         specifier: ~5.9.3
         version: 5.9.3
@@ -324,8 +333,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@types/downloadjs@1.4.6':
+    resolution: {integrity: sha512-mp3w70vsaiLRT9ix92fmI9Ob2yJAPZm6tShJtofo2uHbN11G2i6a0ApIEjBl/kv3e9V7Pv7jMjk1bUwYWvMHvA==}
+
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
+
+  downloadjs@1.4.7:
+    resolution: {integrity: sha512-LN1gO7+u9xjU5oEScGFKvXhYf7Y/empUIIEAGBs1LzUq/rg5duiDrkuH5A2lQGd5jfMOb9X9usDa2oVXwJ0U/Q==}
 
   esbuild@0.27.3:
     resolution: {integrity: sha512-8VwMnyGCONIs6cWue2IdpHxHnAjzxnw2Zr7MkVxB2vjmQ2ivqGFb4LEG3SMnv0Gb2F/G/2yA8zUaiL1gywDCCg==}
@@ -348,6 +363,9 @@ packages:
 
   gardevoir@1.0.0:
     resolution: {integrity: sha512-pzJpUwu56U9pqRM46gcT/sASx5FNcqWfDSQKvtr639yRFnvT8HsHuOYn3AAeYRWzTiZOaqA3sRoyZmupQX2+aw==}
+
+  html-to-image@1.11.13:
+    resolution: {integrity: sha512-cuOPoI7WApyhBElTTb9oqsawRvZ0rHhaHwghRLlTuffoD1B2aDemlCruLeZrUIIdvG7gs9xeELEPm6PhuASqrg==}
 
   leader-line@1.0.8:
     resolution: {integrity: sha512-3TOYtjjcYJCdtEs+bCuVSj6GvFiAzywtjifeeVcBYVwejHfI8a/NRxU4s6DjXB+H/ccNA/qtZEjrFVw9W97dCQ==}
@@ -583,7 +601,11 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.59.0':
     optional: true
 
+  '@types/downloadjs@1.4.6': {}
+
   '@types/estree@1.0.8': {}
+
+  downloadjs@1.4.7: {}
 
   esbuild@0.27.3:
     optionalDependencies:
@@ -622,6 +644,8 @@ snapshots:
     optional: true
 
   gardevoir@1.0.0: {}
+
+  html-to-image@1.11.13: {}
 
   leader-line@1.0.8: {}
 

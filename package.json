@@ -9,12 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/downloadjs": "^1.4.6",
     "typescript": "~5.9.3",
     "vite": "^7.3.1"
   },
   "dependencies": {
     "@fontsource/iosevka": "^5.2.5",
+    "downloadjs": "^1.4.7",
     "gardevoir": "^1.0.0",
+    "html-to-image": "^1.11.13",
     "leader-line": "^1.0.8"
   }
 }
