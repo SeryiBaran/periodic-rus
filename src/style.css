@@ -237,6 +237,10 @@ th {
   line-height: 1.5;
 }
 
+.cellNames li {
+  width: max-content;
+}
+
 sup {
   font-size: 1em;
 }

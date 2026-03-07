@@ -162,6 +162,10 @@ window.addEventListener("DOMContentLoaded", () => {
       new window.LeaderLine(
         document.querySelector(lineData.a),
         document.querySelector(lineData.b),
+        {
+          color: "#555",
+          size: 3,
+        },
       ),
   );
 
@@ -169,8 +173,6 @@ window.addEventListener("DOMContentLoaded", () => {
     lines[index].setOptions({
       startSocket: "top",
       endSocket: "left",
-      startSocketGravity: [0, 0],
-      endSocketGravity: [-180, -50],
     });
   });
 
