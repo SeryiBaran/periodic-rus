@@ -157,6 +157,9 @@ window.addEventListener("DOMContentLoaded", () => {
     { a: "#testTable #preview_name_lat_a", b: "#preview_name_lat_b" },
   ];
 
+  const testTable = document.querySelector("#testTable");
+  assert(testTable);
+
   const lines = linesData.map(
     (lineData) =>
       new window.LeaderLine(
@@ -165,6 +168,7 @@ window.addEventListener("DOMContentLoaded", () => {
         {
           color: "#555",
           size: 3,
+          element: testTable,
         },
       ),
   );
@@ -179,38 +183,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const tablesContainer: HTMLElement | null =
     document.querySelector(".tablesContainer");
   assert(tablesContainer);
-  const download_all_btn: HTMLButtonElement | null =
-    document.querySelector("#download_all_btn");
-  assert(download_all_btn);
   const download_tables_btn: HTMLButtonElement | null = document.querySelector(
     "#download_tables_btn",
   );
   assert(download_tables_btn);
 
-  download_all_btn.addEventListener("click", () => {
-    let text = download_all_btn.innerText;
-
-    download_all_btn.innerText = "Подождите...";
-
-    setTimeout(() => {
-      htmlToImage
-        .toPng(app)
-        .then((dataUrl) => {
-          downloadjs(dataUrl, "SeryiBaran__rus-periodic-table-js_f");
-        })
-        .catch((err) => {
-          console.error("oops, something went wrong!", err);
-        })
-        .finally(() => {
-          download_all_btn.innerText = text;
-        });
-    }, 200);
-  });
-
   download_tables_btn.addEventListener("click", () => {
-    let text = download_tables_btn.innerText;
+    let html = download_tables_btn.innerHTML;
 
-    download_tables_btn.innerText = "Подождите...";
+    download_tables_btn.innerHTML = "Подождите...";
 
     setTimeout(() => {
       htmlToImage
@@ -222,7 +203,7 @@ window.addEventListener("DOMContentLoaded", () => {
           console.error("oops, something went wrong!", err);
         })
         .finally(() => {
-          download_tables_btn.innerText = text;
+          download_tables_btn.innerHTML = html;
         });
     }, 200);
   });
