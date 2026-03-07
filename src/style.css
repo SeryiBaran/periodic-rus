@@ -1,5 +1,5 @@
 :root {
-  font-family: "GOST Type BU", Iosevka, monospace;
+  font-family: "GOST Type BU", Consolas, Iosevka, monospace;
   font-size: 12px;
 
   --s-bg: #ffffff;
@@ -21,8 +21,16 @@
   background-color: var(--f-bg);
 }
 
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
 #app {
   padding: 8px;
+  display: flex;
+  flex-direction: column;
+  /*flex-direction: column-reverse;*/
+  gap: 1em;
 }
 
 table {
@@ -46,11 +54,16 @@ th {
   font-weight: inherit;
 }
 
+.mainTableContainer {
+  display: flex;
+  gap: 0.2em;
+}
+
 .testBGList {
   display: flex;
   gap: 2em;
   font-size: 1.2em;
-  margin-bottom: 0.5em;
+  writing-mode: vertical-lr;
 }
 
 .testBGList li {
@@ -61,8 +74,8 @@ th {
 
 .testBGList li span {
   display: inline-block;
-  height: 2em;
-  width: 4em;
+  height: 5em;
+  width: 1.5em;
   border: 1px black solid;
 }
 
@@ -78,10 +91,16 @@ th {
 
 .periodNumber,
 .rowNumber,
-th {
+.groupTitle {
   text-align: center;
   font-size: 1.2em;
-  padding: 0.2em 0.2em;
+  padding: 0.1em 0;
+}
+
+.otherTableTitle {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0.1em;
 }
 
 .groupTitle {
@@ -90,7 +109,7 @@ th {
 }
 
 .cell {
-  /*width: 9em;*/
+  max-width: 12em;
   text-align: left;
   line-height: 0.8;
   vertical-align: top;
@@ -131,13 +150,16 @@ th {
   flex-direction: row-reverse;
 }
 
+.cell_bElement .cellDataFirstBlock {
+  text-align: right;
+}
+
 .cellDataSymbolBlock {
   display: flex;
   gap: 0.1em;
-}
-
-.cell_bElement .cellDataFirstBlock {
-  text-align: right;
+  font-size: 1.1em;
+  padding-bottom: 0.2em;
+  text-decoration: underline;
 }
 
 .cell_bElement .cellDataSymbolBlock {
@@ -146,7 +168,6 @@ th {
 
 .cellSymbol {
   font-weight: 700;
-  font-size: 1.1em;
 }
 
 .cellWeight {
@@ -165,5 +186,12 @@ sup {
 
 .specialElementMark img {
   aspect-ratio: square;
-  height: 1.5em;
+  height: 1.2em;
+}
+
+#preview {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 6em;
 }

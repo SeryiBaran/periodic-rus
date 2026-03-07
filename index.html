@@ -8,37 +8,89 @@
   </head>
   <body>
     <div id="app">
-      <h1>Периодическая система химических элементов Д. И. Менделеева</h1>
-      <p>Приведены следующие параметры:</p>
-      <ul>
-        <li>Электронные слои</li>
-        <li>Номер</li>
-        <li>Символ</li>
-        <li>Относительная атомная масса</li>
-        <li>Электронная конфигурация</li>
-        <li>
-          Название:
+      <div class="info">
+        <h1>Периодическая система химических элементов Д. И. Менделеева</h1>
+        <p>Пригодно для печати из браузера.</p>
+        <p>Приведены следующие параметры:</p>
+        <div id="preview">
+          <table id="testTable">
+            <tbody>
+              <tr>
+                <td class="cell" style="background-color: var(--p-bg)">
+                  <div class="cellContent">
+                    <div class="cellElectrons">
+                      <ul>
+                        <li>2</li>
+                        <li>4</li>
+                      </ul>
+                    </div>
+                    <div class="cellOther">
+                      <div class="cellData">
+                        <div class="cellDataBlocks">
+                          <span class="cellDataFirstBlock">
+                            <span class="cellDataSymbolBlock">
+                              <span class="cellNumber">6</span>
+                              <span class="cellSymbol">C</span>
+                            </span>
+                            <span class="cellWeight">12.011</span>
+                          </span>
+                          <div class="cellDataSecondBlock"></div>
+                        </div>
+                        <div class="cellElectronConfig">
+                          [He] 2s<sup>2</sup> 2p<sup>2</sup>
+                        </div>
+                        <div class="cellData">
+                          <div class="cellNames">
+                            <ul>
+                              <li id="preview_name_ru_a">Углерод</li>
+                              <li id="preview_name_en_a">Carbon</li>
+                              <li id="preview_name_lat_a">Carboneum</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <ul>
-            <li>На русском</li>
-            <li>На английском</li>
-            <li>На латыни</li>
+            <li id="preview_cellElectrons">Электронные слои</li>
+            <li id="preview_cellNumber">Номер</li>
+            <li id="preview_cellSymbol">Символ</li>
+            <li id="preview_cellWeight">Относительная атомная масса</li>
+            <li id="preview_cellElectronConfig">Электронная конфигурация</li>
+            <li>
+              Название:
+              <ul>
+                <li id="preview_name_ru_b">На русском</liid>
+                <li id="preview_name_en_b">На английском</liid>
+                <li id="preview_name_lat_b">На латыни</liid>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-      <ul class="testBGList noListStyles">
-        <li><span class="s-bg"></span>s-элементы</li>
-        <li><span class="p-bg"></span>p-элементы</li>
-        <li><span class="d-bg"></span>d-элементы</li>
-        <li><span class="f-bg"></span>f-элементы</li>
-      </ul>
-      <table id="table">
-        <thead id="thead"></thead>
-        <tbody id="tbody"></tbody>
-      </table>
-      <table id="otherTable">
-        <tbody id="otherTbody"></tbody>
-      </table>
+        </div>
+      </div>
+      <div class="tablesContainer">
+        <div class="mainTableContainer">
+          <table id="table">
+            <thead id="thead"></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          <ul class="testBGList noListStyles vertical-lr">
+            <li><span class="s-bg"></span>s-элементы</li>
+            <li><span class="p-bg"></span>p-элементы</li>
+            <li><span class="d-bg"></span>d-элементы</li>
+            <li><span class="f-bg"></span>f-элементы</li>
+          </ul>
+        </div>
+        <table id="otherTable">
+          <tbody id="otherTbody"></tbody>
+        </table>
+      </div>
     </div>
+    <script src="node_modules/leader-line/leader-line.min.js"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
