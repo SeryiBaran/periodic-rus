@@ -48,7 +48,11 @@ function createElementHTML(element: DataElement) {
     `<div class="cellContent">
       <div class="cellElectrons">
         <ul>
-          ${element.shells.map((shell) => `<li>${shell}</li>`).join("")}
+          ${element.shells
+            .slice()
+            .reverse()
+            .map((shell) => `<li>${shell}</li>`)
+            .join("")}
         </ul>
       </div>
       <div class="cellOther">
