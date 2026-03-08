@@ -59,10 +59,10 @@ function createElementHTML(element: DataElement) {
         <div class="cellData">
           <div class="cellDataBlocks">
             <span class="cellDataFirstBlock">
-              <span class="cellDataSymbolBlock">
+              <a class="cellDataSymbolBlock" href="${element.source}">
                 <span class="cellNumber">${element.number}</span>
                 <span class="cellSymbol">${element.symbol}</span>
-              </span>
+              </a>
               <span class="cellWeight">${unsureWeights.includes(element.number) ? "[" : ""}${element.atomic_mass}${unsureWeights.includes(element.number) ? "]" : ""}</span>
             </span>
             <div class="cellDataSecondBlock">${(function () {
@@ -76,7 +76,7 @@ function createElementHTML(element: DataElement) {
             })()}</div>
           </div>
           <div class="cellElectronConfig">${element.electron_configuration_semantic.replaceAll(/([a-z])(\d+)/g, "$1<sup>$2</sup>")}</div>
-        <div class="cellData">
+        </div>
         <div class="cellNames">
           <ul>
             <li>${additionalElementsData[element.number - 1].ru}</li>

@@ -172,6 +172,7 @@ th {
 }
 
 .cell {
+  position: relative;
   max-width: 12em;
   text-align: left;
   line-height: 0.8;
@@ -180,6 +181,7 @@ th {
 }
 
 .cellContent {
+  position: relative;
   display: flex;
   align-items: stretch;
 }
@@ -258,6 +260,22 @@ th {
 
 sup {
   font-size: 1em;
+}
+
+/*.cellLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cellLink:hover {
+  background-color: rgba(100, 100, 100, 0.1);
+}*/
+
+a {
+  color: inherit;
 }
 
 .specialElementMark img {
