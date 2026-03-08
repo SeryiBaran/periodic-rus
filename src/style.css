@@ -139,7 +139,7 @@ th {
   display: inline-block;
   height: 5em;
   width: 1.5em;
-  border: 1px black solid;
+  border: 0.1em black solid;
 }
 
 #otherTable {
@@ -149,7 +149,7 @@ th {
 table,
 td:not(.cell_empty),
 th {
-  border: 1px solid black;
+  border: 0.1em solid black;
 }
 
 .periodNumber,

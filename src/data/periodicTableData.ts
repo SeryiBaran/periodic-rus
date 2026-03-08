@@ -99,7 +99,7 @@ export const additionalElementsData = [
   { ru: "Сера", lat: "Sulfur" }, // Sulphur
   { ru: "Хлор", lat: "Chlorum" },
   { ru: "Аргон", lat: "Argon" },
-  { ru: "Калий", lat: "Kalium, Calium" },
+  { ru: "Калий", lat: "Kalium" }, // Calium
   { ru: "Кальций", lat: "Calcium" },
   { ru: "Скандий", lat: "Scandium" },
   { ru: "Титан", lat: "Titanium" },
