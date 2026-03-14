@@ -3,7 +3,6 @@ import downloadjs from "downloadjs";
 import { effect, reactive, track } from "./vendor/SeryiBaran__rectal";
 
 import "gardevoir";
-import "@fontsource/iosevka";
 import "./style.css";
 import MaterialSymbolsAsterisk from "./MaterialSymbolsAsterisk.svg";
 

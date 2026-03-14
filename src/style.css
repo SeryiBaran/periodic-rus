@@ -4,7 +4,7 @@
 }
 
 :root {
-  font-family: "GOST Type BU", Consolas, Iosevka, monospace;
+  font-family: "GOST Type BU", Consolas, monospace;
   font-size: 12px;
 
   --s-bg: #ffffff;
