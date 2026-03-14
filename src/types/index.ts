@@ -3,3 +3,7 @@ declare global {
     LeaderLine: any;
   }
 }
+
+export interface Settings {
+  compactMode: boolean;
+}

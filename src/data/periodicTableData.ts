@@ -99,7 +99,7 @@ export const additionalElementsData = [
   { ru: "Сера", lat: "Sulfur" }, // Sulphur
   { ru: "Хлор", lat: "Chlorum" },
   { ru: "Аргон", lat: "Argon" },
-  { ru: "Калий", lat: "Kalium" }, // Calium
+  { ru: "Калий", lat: "Kalium" },
   { ru: "Кальций", lat: "Calcium" },
   { ru: "Скандий", lat: "Scandium" },
   { ru: "Титан", lat: "Titanium" },
@@ -181,7 +181,7 @@ export const additionalElementsData = [
   { ru: "Калифорний", lat: "Californium" },
   { ru: "Эйнштейний", lat: "Einsteinium" },
   { ru: "Фермий", lat: "Fermium" },
-  { ru: "Менделевий", lat: "Mendelevium" }, // nMendeleevium
+  { ru: "Менделевий", lat: "Mendelevium" }, // Mendeleevium
   { ru: "Нобелий", lat: "Nobelium" },
   { ru: "Лоуренсий", lat: "Lawrencium" }, // Laurentium
   { ru: "Резерфордий", lat: "Rutherfordium" },

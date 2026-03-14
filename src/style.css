@@ -114,9 +114,6 @@ th {
   font-weight: inherit;
 }
 
-.tablesContainer {
-}
-
 .mainTableContainer {
   display: inline-flex;
   gap: 0.2em;
@@ -127,19 +124,23 @@ th {
   gap: 2em;
   font-size: 1.2em;
   writing-mode: vertical-lr;
-}
 
-.testBGList li {
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-}
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
 
-.testBGList li span {
-  display: inline-block;
-  height: 5em;
-  width: 1.5em;
-  border: 0.1em black solid;
+    span {
+      display: inline-block;
+      height: 5em;
+      width: 1.5em;
+      border: 0.1em black solid;
+    }
+  }
+
+  .compactMode & {
+    display: none;
+  }
 }
 
 #otherTable {
@@ -157,13 +158,17 @@ th {
 .groupTitle {
   text-align: center;
   font-size: 1.2em;
-  padding: 0.1em 0;
+  &:not(.compactMode *) {
+    padding: 0.1em 0;
+  }
 }
 
 .otherTableTitle {
   text-align: center;
   font-size: 1.1em;
-  padding: 0.1em;
+  &:not(.compactMode *) {
+    padding: 0.1em;
+  }
 }
 
 .groupTitle {
@@ -177,7 +182,9 @@ th {
   text-align: left;
   line-height: 0.8;
   vertical-align: top;
-  padding: 0.2em 0.1em 0.1em 0.1em;
+  &:not(.compactMode *) {
+    padding: 0.2em 0.1em 0.1em 0.1em;
+  }
 }
 
 .cellContent {
@@ -221,10 +228,19 @@ th {
 }
 
 .cellDataFirstBlock {
-  margin: 0 0.3em;
+  &:not(.compactMode *) {
+    margin: 0 0.3em;
+  }
+  .compactMode & {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2em;
+    margin-bottom: 0.2em;
+  }
 }
 
 .cell_bElement .cellDataFirstBlock {
+  flex-direction: row-reverse;
   text-align: right;
 }
 
@@ -232,8 +248,11 @@ th {
   display: flex;
   gap: 0.1em;
   font-size: 1.1em;
-  padding-bottom: 0.2em;
   text-decoration: underline;
+
+  &:not(.compactMode *) {
+    padding-bottom: 0.2em;
+  }
 }
 
 .cell_bElement .cellDataSymbolBlock {
@@ -245,7 +264,9 @@ th {
 }
 
 .cellWeight {
-  font-size: 0.9em;
+  &:not(.compactMode *) {
+    font-size: 0.9em;
+  }
 }
 
 .cellElectronConfig {
@@ -280,7 +301,10 @@ a {
 
 .specialElementMark img {
   aspect-ratio: square;
-  height: 1.2em;
+  height: 0.8em;
+  &:not(.compactMode *) {
+    height: 1.2em;
+  }
 }
 
 #preview {
