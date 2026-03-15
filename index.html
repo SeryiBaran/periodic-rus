@@ -1,86 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rus-periodic-table-js</title>
-
-    <link rel="preload" href="./src/GOST_BU.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <title>Короткая периодическая таблица</title>
+    <link
+      rel="preload"
+      href="@/src/GOST_BU.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div id="app">
-      <div class="info">
-        <h1>Периодическая система химических элементов Д. И. Менделеева</h1>
-        <p>Шрифт - <code>GOST Type BU</code>.</p>
-        <p><label><input type="checkbox" id="compactModeCheck"/>Компактный режим</label></p>
-        <p>Приведены следующие параметры:</p>
-        <div id="preview">
-          <table id="testTable">
-            <tbody>
-              <tr>
-                <td class="cell" style="background-color: var(--p-bg)">
-                  <div class="cellContent">
-                    <div class="cellElectrons">
-                      <ul>
-                        <li>2</li>
-                        <li>4</li>
-                      </ul>
-                    </div>
-                    <div class="cellOther">
-                      <div class="cellData">
-                        <div class="cellDataBlocks">
-                          <span class="cellDataFirstBlock">
-                            <span class="cellDataSymbolBlock">
-                              <span class="cellNumber">6</span>
-                              <span class="cellSymbol">C</span>
-                            </span>
-                            <span class="cellWeight">12.011</span>
-                          </span>
-                          <div class="cellDataSecondBlock"></div>
-                        </div>
-                        <div class="cellElectronConfig">
-                          [He] 2s<sup>2</sup> 2p<sup>2</sup>
-                        </div>
-                        <div class="cellData">
-                          <div class="cellNames">
-                            <ul>
-                              <li id="preview_name_ru_a">Углерод</li>
-                              <li id="preview_name_en_a">Carbon</li>
-                              <li id="preview_name_lat_a">Carboneum</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-            <li id="preview_cellElectrons">Электронные слои</li>
-            <li id="preview_cellNumber">Номер</li>
-            <li id="preview_cellSymbol">Символ</li>
-            <li id="preview_cellWeight">Относительная атомная масса</li>
-            <li id="preview_cellElectronConfig">Электронная конфигурация</li>
-            <li>
-              Название:
-              <ul>
-                <li id="preview_name_ru_b">На русском</liid>
-                <li id="preview_name_en_b">На английском</liid>
-                <li id="preview_name_lat_b">На латыни</liid>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <p class="buttons">
-          <button id="download_tables_btn"><span class="btnIcon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 4v4h6V8zm8 0v4h6V8zm-8 6v4h6v-4zm8 0v4h6v-4z"/></svg></span>Скачать таблицу в .PNG</button>
-        </p>
-      </div>
-      <div class="tablesContainer"></div>
-    </div>
-    <script src="./leader-line.min.js"></script>
+    <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

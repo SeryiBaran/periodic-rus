@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "GOST Type BU";
+  src: url("@/fonts/GOST_BU.ttf") format("truetype");
+}
+
+:root {
+  font-family: "GOST Type BU", Consolas, monospace;
+  font-size: 12px;
+
+  --s-bg: #ffffff;
+  --p-bg: #d1d1d1;
+  --d-bg: #a2a2a2;
+  --f-bg: #303030;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.s-bg {
+  background-color: var(--s-bg);
+}
+.p-bg {
+  background-color: var(--p-bg);
+}
+.d-bg {
+  background-color: var(--d-bg);
+}
+.f-bg {
+  background-color: var(--f-bg);
+}
+
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+#app {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: max-content;
+}
+
+.btnWithIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listStyles {
+  list-style-type: disc;
+  margin-left: 1.5em;
+}
+
+.periodNumber,
+.rowNumber,
+.groupTitle {
+  text-align: center;
+  font-size: 1.2em;
+  &:not(.compactMode *) {
+    padding: 0.1em 0;
+  }
+}
+
+table,
+td:not(.cell_empty),
+th {
+  border: 0.1em solid black;
+}

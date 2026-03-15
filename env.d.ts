@@ -1,2 +1,1 @@
-declare module "@fontsource/*" {}
-declare module "gardevoir" {}
+/// <reference types="vite-plus/client" />

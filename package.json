@@ -1,22 +1,49 @@
 {
-  "name": "rus-periodic-table-js",
-  "private": true,
+  "name": "periodic-rus",
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@types/downloadjs": "^1.4.6",
-    "typescript": "~5.9.3",
-    "vite": "^8.0.0"
+    "dev": "vp dev",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vp preview",
+    "build-only": "vp build",
+    "type-check": "vue-tsc --build",
+    "format": "vp fmt src/",
+    "prepare": "vp config"
   },
   "dependencies": {
+    "@vueuse/core": "^14.2.1",
     "downloadjs": "^1.4.7",
     "gardevoir": "^1.0.0",
     "html-to-image": "^1.11.13",
-    "leader-line": "^1.0.8"
+    "pinia": "^3.0.4",
+    "purecss": "^3.0.0",
+    "vue": "^3.5.29"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.450",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/downloadjs": "^1.4.6",
+    "@types/node": "^24.11.0",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "@vue/tsconfig": "^0.8.1",
+    "npm-run-all2": "^8.0.4",
+    "typescript": "~5.9.3",
+    "unplugin-icons": "^23.0.1",
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vite-plugin-vue-devtools": "^8.0.6",
+    "vite-plus": "latest",
+    "vue-tsc": "^3.2.5"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+    }
   }
 }
